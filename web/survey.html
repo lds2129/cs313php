@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Rexburg YSA Conference Survey</title>
+		<link rel="stylesheet" type="text/css" href="survey.css">        
+        <link href='http://fonts.googleapis.com/css?family=Roboto:400,500' rel='stylesheet' type='text/css' />
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
+        <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css' />
+     
+	</head>
+	<body>
+        
+        <a href="index.html"><img src="homebutton.png" alt="goback" style="width:60px;height:60px;" align="left"></a>
+        <div>
+		<h1>Qucik YSAC Survey, Are you ready?</h1>
+        <br>
+       
+        <h3>Thanks for being willing to participate this survery.<br>I promise that It won't take too much yourprecious time!!</h3>
+        </div>
+        
+		 
+		<form class="form" method="post" action="results.php">
+			<strong class="name">May I ask you name? </strong> <input type="text" id="name" name="name">
+          
+            <br>
+            <br>
+			
+            <strong class="question">Gender?</strong><br>
+            <input class="answer" type="radio" name="gender" value="Male" checked="male">Male
+            <input class="answer" type="radio" name="gender" value="Female" checked="female">Female
+            
+            <br>
+            <br>
+            
+			<strong class="question">Which group are you in?</strong><br>
+            <select class="answer" name="ageGroup" required>
+				  <option disabled selected value>  -- select an option --</option><br>
+				  <option  value="Youngest">18-19</option><br>
+				  <option  value="Early Tweness">20-23</option><br>
+				  <option  value="Mid Tweness">24-26</option><br>
+				  <option  value="Late Tweness">27-29</option><br>
+				  <option  value="Thirty or Above">30+</option><br>
+				  <option  value="Leaders">Leader</option>
+		  	</select>
+            <br>
+            <br>
+        <!--    
+			<strong class="question">Which group are you in?</strong><br>
+			<input class="answer" type="radio" name="ageGroup" value="Youngest" checked="true">18-19<br>
+			<input class="answer" type="radio" name="ageGroup" value="Early Twenees">20-23<br>
+			<input class="answer" type="radio"	name="ageGroup" value="Mid Twenees">24-26<br>
+            <input class="answer" type="radio"	name="ageGroup" value="Late Twenees">27-29<br>
+            <input class="answer" type="radio"	name="ageGroup" value="Thirty or Above">30+<br>
+			<input class="answer" type="radio" name="ageGroup" value="Leaders"> Leader <br><br>
+			-->
+			<strong class="question">What do you expect from the YSA Conference?</strong><br>
+			<input class="answer" type="radio" name="expectation" value="finding Eternal Companion" checked="true">Finnidng eternal companion<br>
+			<input class="answer" type="radio" name="expectation" value="making friends">Making frineds<br>
+			
+            <input class="answer" type="radio" name="expectation" value="strengthen my Faith">Strengthen my faith<br><br>
+			
+			<strong class="question">Any additional comments:</strong><br>
+			<textarea class="answer" name='comment' id='comment'></textarea><br><br>
+			<input class="button" type="submit" value="Submit">
+		</form>
+	</body>
+</html>

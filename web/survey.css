@@ -1,0 +1,53 @@
+body{
+	 background: #7b38aa;
+}
+
+h1{
+	color: #ffffff;
+	text-align: center;
+}
+
+h3{
+	color: #ffffff;
+	text-align: center;
+}
+
+.form{
+    border: 5px solid ;
+	border-color: #780b07;
+	border-radius: 20px;
+	background-color: #ffffff;
+	padding: 20px;
+}
+
+.question{
+	margin-left: 20px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+}
+
+.answer{
+	margin-left: 20px;
+}
+
+.button{
+	border-radius: 10px;
+	background: #ffffff;
+	padding: 5px;
+	text-decoration: inherit;
+	color: #800000;
+	margin-left: 50px;
+	margin-bottom: 50px;
+}
+
+.name{
+	margin-top: 20px;
+}
+
+div{
+    width: 801px;
+    border-color: blue;
+    margin: 0 auto;
+    height: 150px;
+    background: #f0b618
+}
