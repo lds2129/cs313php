@@ -26,7 +26,7 @@ require('db_connection.php');
         <h1><center>Ultaree, BYUI Korean Association</center></h1>
         <nav id="nav">
             <ul id="nav">
-                <li><a href = "about.html">Home</a></li>
+                <li><a href = "main.html">Home</a></li>
                 <li><a href = "assignments.html">Ultaree?</a></li>
                 <li><a href = "discussion.php">Board!</a></li>
                 <li><a href = "assignments.html">Activity!</a></li>
