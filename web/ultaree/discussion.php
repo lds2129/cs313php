@@ -77,7 +77,7 @@ require('db_connection.php');
                 </tr>
             </thead>
         <?php
-            $query = $db->query('SELECT * FROM discussion ORDER BY id DESC')->fetchAll();
+           // $query = $db->query('SELECT * FROM discussion ORDER BY id DESC')->fetchAll();
             foreach($query as $row){
                     echo '<tr>';
                     echo '<td><b>' . $row['title'] . '</b></td>';
