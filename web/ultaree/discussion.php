@@ -35,6 +35,40 @@ require('db_connection.php');
         </nav>
     <div id="separator"></div>
     <section id="mainSection">
+              <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
+            <select name="boards">
+                <option value="all">Which board are you looking for?</option>
+                <?php
+                $query = $db->query('SELECT * FROM discussion ORDER BY id DESC')->fetchAll();
+                
+                if($_SERVER["REQUEST_METHOD"] == "POST" && $_POST['form'] == 'form2'){
+                    $category = $_POST['boards'];
+                    if($category != 'all'){
+                        $query = $db->query("SELECT * FROM discussion WHERE categoryid='$category'")->fetchAll();
+                    }
+                }
+ 
+                
+ 
+                  foreach($db->query("SELECT * FROM category c JOIN discussion d ON c.id = d.categoryid ") as $category){
+                      if($_SERVER["REQUEST_METHOD"] == "POST" && $_POST['form'] == 'form2'){
+                        if($_POST["boards"] == $category["id"]){ 
+                            $selected = "selected='selected'";
+                        }
+                        else{
+                            $selected = "";
+                        }
+                    }
+                    echo '<option value="' . $category['id'] . '"' . $selected . '>' . $category['namecategory'] . '</option>';
+                   
+                  }
+                ?>
+
+                <input type="hidden" name="form" value="form2" />
+                <input type="submit" value="Search"/>
+            </select>
+        </form>
+        
          <table>
             <thead>
                 <tr>
