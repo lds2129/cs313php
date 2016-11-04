@@ -16,7 +16,7 @@ else{
 
 switch($action){
 /****** Account info *****/
-    case 'signIn':
+    case 'signin':
         $row = get_login_user();
         if($row == ""){
         	$count = 0;
@@ -34,7 +34,7 @@ switch($action){
             break; 
         }
         else{
-            header("Location: /ultaree/admin/?action=signIn");
+            header("Location: /ultaree/admin/index.php?action=signin");
         }
    /* 
     case 'signUp':

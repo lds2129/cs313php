@@ -31,7 +31,7 @@ require('db_connection.php');
                 <li><a href = "discussion.php">Board!</a></li>
                 <li><a href = "assignments.html">Activity!</a></li>
                 <li><a href = "assignments.html">Gallery</a></li>
-                <li><a href = "admin/?action=signin">Log in</a></li>
+                <li><a href = "admin/index.php?action=signin">Log in</a></li>
             </ul>                
         </nav>
     <div id="separator"></div>
