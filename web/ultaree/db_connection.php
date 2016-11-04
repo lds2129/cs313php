@@ -1,16 +1,15 @@
 <?php
     // default Heroku Postgres configuration URL
     $dbUrl = getenv('DATABASE_URL');
-    
+
     if (empty($dbUrl)) {
      // example localhost configuration URL with postgres username and a database called cs313db
-        echo "I am in ";
-        $dbUrl = "postgres://postgres:rlawkdghks2@localhost:5432/ultaree";
+        require('../../../cs313/model/localDB.php');
     }
 
     $dbopts = parse_url($dbUrl);
 
-     $dbHost = $dbopts["host"]; 
+    $dbHost = $dbopts["host"]; 
      $dbPort = $dbopts["port"]; 
      $dbUser = $dbopts["user"]; 
      $dbPassword = $dbopts["pass"];
