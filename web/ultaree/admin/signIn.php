@@ -6,7 +6,7 @@
         <link href='http://fonts.googleapis.com/css?family=Roboto:400,500' rel='stylesheet' type='text/css' />
         <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css' />
         <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css' />
-        <link rel="stylesheet" type="text/css" href="mystyle.css" />
+        <link rel="stylesheet" type="text/css" href="../mystyle.css" />
   </head>
     
   <body>   
@@ -22,11 +22,11 @@
         <h1><center>Ultaree, BYUI Korean Association</center></h1>
         <nav id="nav">
             <ul id="nav">
-                <li><a href = "main.html">Home</a></li>
-                <li><a href = "assignments.html">Ultaree?</a></li>
-                <li><a href = "discussion.php">Board!</a></li>
-                <li><a href = "assignments.html">Activity!</a></li>
-                <li><a href = "assignments.html">Gallery</a></li>
+                <li><a href = "../main.html">Home</a></li>
+                <li><a href = "../assignments.html">Ultaree?</a></li>
+                <li><a href = "../discussion.php">Board!</a></li>
+                <li><a href = "../assignments.html">Activity!</a></li>
+                <li><a href = "../assignments.html">Gallery</a></li>
                 <li><a href = "admin/index.php?action=signin">Log in</a></li>
             </ul>                
         </nav>
