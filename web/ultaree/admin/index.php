@@ -34,7 +34,7 @@ switch($action){
             break; 
         }
         else{
-            header("Location: /ultaree/admin/index.php?action=signin");
+            header("Location: index.php?action=signin");
         }
    /* 
     case 'signUp':
