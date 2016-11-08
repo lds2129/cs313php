@@ -92,4 +92,13 @@
         $row = $result->fetch();
         return $row;
     }
+
+    function createPost($title, $body, $board){
+        global $db;
+        $id = $_SESSION['id'];
+        $sql = "INSERT INTO category(title, body, categoryid) VALUES ('". $title . "', '" . $body . "', '" . $board . "')";
+        $result  = $db->exec($sql);
+        
+    }
+
 ?>

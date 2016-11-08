@@ -34,23 +34,31 @@
     <section id="mainSection">
         <h1>Create new post</h1>
 
-        <?php 
+        <?php
+        	$error = ""; 
             if(isset($_POST['Submit'])){
-                if($count == 1){
-                    //session_start();
-                    //register the username and password and redirect to account page
-                    $_SESSION['loggedin'] = true;
-                    $_SESSION["id"] = $row['id'];
+               if (!(isset($_POST['title']) && isset($_POST['body'])))
+               {
+               	$error = "all fields are required";
+               }
+               else 
+               {
+               	$title = $_POST['title'];
+               	$body = $_POST['body'];
+               	$board = $_POST['board'];
 
-                    header("Location: /ultaree/admin/index.php?action=account");
-                }
-                else{
-                    echo "<span class='error'>Wrong Username or Password</span>";
-                }
+               	createPost($title, $body, $board);
+
+	         	  header("Location: /ultaree/discussion.php");
+               }
             }
+
         ?>
-        <form name="login" id="login-form" method="post" action="#">
-            <table id="login">
+        <span>
+        	<?= $error ?>
+        </span>
+        <form name="post" id="post-form" method="post" action="#">
+            <table id="post">
  				<tr>
  					<td>title</td>
  					<td><input type="text" name="title" />
@@ -59,12 +67,39 @@
 
                 <tr>
                 	<td>body</td>
-
                 	<td>
                 		<textarea name="body" rows="5" cols="50">
 
                 		</textarea>
                 	</td>		
+				</tr>
+
+				<tr>
+					<td>
+						which board?
+					</td>
+					<td>
+						<select name="board">
+               		
+                <?php
+                $query = $db->query('SELECT * FROM discussion ORDER BY id DESC')->fetchAll();
+                
+                  foreach($db->query("SELECT * FROM category c JOIN discussion d ON c.id = d.categoryid ") as $category){
+                     
+                    echo '<option value="' . $category['id'] . '">' . $category['namecategory'] . '</option>';
+                   
+                  }
+                ?>
+
+                <input type="hidden" name="form" value="form2" />
+                <input type="submit" value="Search"/>
+            </select>
+					</td>
+
+				</tr>
+
+
+
 
                 <tr><td colspan="3">&nbsp;</td></tr>
                 <tr>
