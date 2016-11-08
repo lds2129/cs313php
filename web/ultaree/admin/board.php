@@ -32,7 +32,7 @@
         </nav>
     <div id="separator"></div>
     <section id="mainSection">
-        <h1>Sign In</h1>
+        <h1>Who you are board</h1>
 
         <?php 
             if(isset($_POST['Submit'])){
@@ -51,12 +51,7 @@
         ?>
         <form name="login" id="login-form" method="post" action="#">
             <table id="login">
-                <tr>
-                    <td>Your post &nbsp;</td>
-                    <td><input name="textarea" type="text" id="textarea"/></td>                                     
-                    <td></td>
-                </tr>
-                
+ 
                 <tr>
                 	<td>Tell us who you are!</td>
                 	<td>
