@@ -96,9 +96,9 @@
     function createPost($title, $body, $board){
         global $db;
         $id = $_SESSION['id'];
-        $sql = "INSERT INTO category(title, body, categoryid) VALUES ('". $title . "', '" . $body . "', '" . $board . "')";
+        $sql = "INSERT INTO category(title, body, categoryid) VALUES ('". $title . "', '" . $body . "', '" . $board . "') WHERE userid='".$id."'";
         $result  = $db->exec($sql);
-        
+
     }
 
 ?>
