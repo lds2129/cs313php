@@ -58,9 +58,12 @@
                 </tr>
                 
                 <tr>
-                	<textarea rows="5" cols="50">
-                	
-                	</textarea>
+                	<td>Tell us who you are!</td>
+                	<td>
+                		<textarea rows="5" cols="50">
+
+                		</textarea>
+                	</td>		
 
                 <tr><td colspan="3">&nbsp;</td></tr>
                 <tr>
