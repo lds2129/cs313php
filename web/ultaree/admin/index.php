@@ -36,6 +36,10 @@ switch($action){
         else{
             header("Location: index.php?action=signin");
         }
+
+    case 'createPost':
+        include("board.php");           
+
    /* 
     case 'signUp':
     	$errorMatch = "";

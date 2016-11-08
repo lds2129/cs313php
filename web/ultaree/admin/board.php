@@ -82,7 +82,7 @@
 						<select name="board">
                		
                 <?php
-                $query = $db->query('SELECT * FROM discussion ORDER BY id DESC')->fetchAll();
+          
                 
                   foreach($db->query("SELECT * FROM category c JOIN discussion d ON c.id = d.categoryid ") as $category){
                      
@@ -91,8 +91,6 @@
                   }
                 ?>
 
-                <input type="hidden" name="form" value="form2" />
-                <input type="submit" value="Search"/>
             </select>
 					</td>
 
