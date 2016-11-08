@@ -38,7 +38,16 @@ switch($action){
         }
 
     case 'createPost':
-        include("board.php");           
+        if($_SESSION['loggedin']){
+            
+            include("board.php");  
+            break; 
+        }
+        else{
+            header("Location: index.php?action=signin");
+        }
+
+              
 
    /* 
     case 'signUp':
