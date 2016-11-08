@@ -96,7 +96,7 @@
     function createPost($title, $body, $board){
         global $db;
         $id = $_SESSION['id'];
-        $sql = "INSERT INTO category (title, body, categoryid, userid) VALUES ('$title', '$body', '$board', '$id')";
+        $sql = "INSERT INTO discussion (title, body, categoryid, userid) VALUES ('$title', '$body', '$board', '$id')";
         $result  = $db->exec($sql);
 
     }
