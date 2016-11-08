@@ -84,7 +84,7 @@
                 <?php
           
                 
-                  foreach($db->query("SELECT * FROM category c JOIN discussion d ON c.id = d.categoryid ") as $category){
+                  foreach($db->query("SELECT DISTINCT * FROM category c JOIN discussion d ON c.id = d.categoryid ") as $category){
                      
                     echo '<option value="' . $category['id'] . '">' . $category['namecategory'] . '</option>';
                    
