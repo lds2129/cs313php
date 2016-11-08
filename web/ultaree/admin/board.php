@@ -57,7 +57,10 @@
                     <td></td>
                 </tr>
                 
-
+                <tr>
+                	<textarea rows="5" cols="50">
+                	
+                	</textarea>
 
                 <tr><td colspan="3">&nbsp;</td></tr>
                 <tr>
@@ -67,7 +70,7 @@
                 </tr>
 
                  <tr>
-                    <td><input type="submit" name="Submit" value="Reset"/></td>
+                    <td><input type="reset" name="Reset" value="Reset"/></td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
