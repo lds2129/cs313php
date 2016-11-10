@@ -1,8 +1,7 @@
 <?php
 require('db_connection.php');
 ?>
-
-<?php include "../header.php"; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/ultaree/header.php'; ?>
               <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="POST">
             <select name="boards">
                 <option value="all">Which board are you looking for?</option>

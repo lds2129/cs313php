@@ -1,4 +1,4 @@
-<?php include "../header.php"; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/ultaree/header.php'; ?>
     <h1>Welcome <?= $row["username"]; ?></h1>
      <footer id="footer">
         <p>&copy; James Kim's All rights has reserved.</p>

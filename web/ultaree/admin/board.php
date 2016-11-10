@@ -1,4 +1,4 @@
-<?php include "../header.php"; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/ultaree/header.php'; ?>
         <h1>Create new post</h1>
 
         <?php

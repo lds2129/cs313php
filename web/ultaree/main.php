@@ -1,4 +1,4 @@
-<?php include "header.php"; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/ultaree/header.php'; ?>
     <section id="mainSection">
       <div id="logo">
         <h1 id="frontLogo">James <span class="colorVelvet">Kim</span></h1>

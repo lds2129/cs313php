@@ -1,4 +1,5 @@
-<?php include "../header.php"; ?>
+<?php include $_SERVER['DOCUMENT_ROOT'] . '/ultaree/header.php'; ?>
+
     <footer id="footer">
         <p>&copy; James Kim's All rights has reserved.</p>
     </footer>
