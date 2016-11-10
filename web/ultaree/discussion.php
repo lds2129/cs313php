@@ -17,7 +17,7 @@ require('db_connection.php');
  
                 
  
-                  foreach($db->query("SELECT * FROM category c JOIN discussion d ON c.id = d.categoryid ") as $category){
+                  foreach($db->query("SELECT * FROM category") as $category){
                       if($_SERVER["REQUEST_METHOD"] == "POST" && $_POST['form'] == 'form2'){
                         if($_POST["boards"] == $category["id"]){ 
                             $selected = "selected='selected'";
