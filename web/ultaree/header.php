@@ -27,10 +27,11 @@
                 <li><a href = "/ultaree/discussion.php">Board!</a></li>
                 <li><a href = "/ultaree/assignments.html">Activity!</a></li>
                 <li><a href = "/ultaree/assignments.html">Gallery</a></li>
-                 <?php if(isset($_SESSION['loggedin'])){?>
+                 <?php //if(isset($_SESSION['loggedin'])){ ?>
+
                 <li><a href = "/ultaree/admin/index.php?action=account">Account</a></li>
                 <li><a href = "/ultaree/admin/index.php?action=logout">Log out</a></li>
-                <?php}
+                <?php //}
                 //else {?>
                 <li><a href = "/ultaree/admin/index.php?action=signin">Log in</a></li>
                 <?php//}?>

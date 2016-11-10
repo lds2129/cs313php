@@ -27,6 +27,13 @@ switch($action){
         include ("signIn.php");
         break;
     
+    case 'logout': 
+                session_start();             
+                session_destroy();             
+                header("Location: index.php?action=signin");             
+                break;
+
+
     case 'account':
         if($_SESSION['loggedin']){
             $row = get_user();
