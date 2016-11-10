@@ -1,6 +1,15 @@
-<?php include "../header.php"; ?>
-    <h1>Welcome <?= $row["username"]; ?></h1>
-     <footer id="footer">
+<?php include "header.php"; ?>
+    <section id="mainSection">
+      <div id="logo">
+        <h1 id="frontLogo">James <span class="colorVelvet">Kim</span></h1>
+        <p id="subtitle">I am an <span class="colorWhite">OPERA SINGER!!!</span></p>
+        <div id="cantar"></div>
+      </div>
+      <h1 id="welcome">WELCOME<span id="colorWhiteAndRePos"><br/> and Welcome!</span></h1>
+        <p id="lhs"><span class="colorWhite">As long as you get to know me, You will find more happiness from me!</span></p>
+      
+    </section>
+    <footer id="footer">
         <p>&copy; James Kim's All rights has reserved.</p>
     </footer>
         
@@ -22,3 +31,6 @@
         
   </body>
 </html>
+
+ 
+

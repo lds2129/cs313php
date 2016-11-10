@@ -1,6 +1,5 @@
 <?php include "../header.php"; ?>
-    <h1>Welcome <?= $row["username"]; ?></h1>
-     <footer id="footer">
+    <footer id="footer">
         <p>&copy; James Kim's All rights has reserved.</p>
     </footer>
         
@@ -22,3 +21,6 @@
         
   </body>
 </html>
+
+ 
+
