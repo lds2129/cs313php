@@ -27,13 +27,13 @@
                 <li><a href = "discussion.php">Board!</a></li>
                 <li><a href = "assignments.html">Activity!</a></li>
                 <li><a href = "assignments.html">Gallery</a></li>
-                  <?php if(isset($_SESSION['loggedin'])){?>
+                 <?php //if(isset($_SESSION['loggedin'])){?>
                 <li><a href = "admin/index.php?action=account">Account</a></li>
                 <li><a href = "admin/index.php?action=logout">Log out</a></li>
-                <?php}
-                else {?>
+                <?php//}
+                //else {?>
                 <li><a href = "admin/index.php?action=signin">Log in</a></li>
-                <?php}?>
+                <?php//}?>
             </ul>                
         </nav>
     <div id="separator"></div>
