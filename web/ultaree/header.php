@@ -9,7 +9,9 @@
         <link rel="stylesheet" type="text/css" href="../mystyle.css" />
   </head>
     
-  <body>   
+  <body>  
+
+  <!-- 
         <div id="mySidenav" class="sidenav">
           <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
           <a href="#">About</a>
@@ -18,7 +20,7 @@
           <a href="#">Contact</a>
         </div>
 
-        
+      -->  
         <h1><center>Ultaree, BYUI Korean Association</center></h1>
         <nav id="nav">
             <ul id="nav">
