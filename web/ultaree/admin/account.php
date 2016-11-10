@@ -1,6 +1,8 @@
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/ultaree/header.php'; ?>
     <h1>Welcome <?= $row["username"]; ?></h1>
     <a href = "/ultaree/admin/index.php?action=createPost">create Post</a>
+    <br><br>
+    <a href = "/ultaree/admin/index.php?action=createCategory">create Category</a>
      <footer id="footer">
         <p>&copy; James Kim's All rights has reserved.</p>
     </footer>

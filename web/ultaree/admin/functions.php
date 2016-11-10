@@ -101,4 +101,14 @@
 
     }
 
+
+    function createCategory($title){
+        global $db;
+        $id = $_SESSION['id'];
+        $sql = "INSERT INTO category (namecategory, userid) VALUES ('$title', '$id')";
+        $result  = $db->exec($sql);
+
+    }
+
+
 ?>

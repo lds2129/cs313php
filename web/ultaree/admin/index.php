@@ -47,14 +47,23 @@ switch($action){
     case 'createPost':
         if($_SESSION['loggedin']){
             
-            include("board.php");  
+            include("createPost.php");  
             break; 
         }
         else{
             header("Location: index.php?action=signin");
         }
 
-              
+    case 'createCategory':
+        if($_SESSION['loggedin']){
+            
+            include("createCategory.php");  
+            break; 
+        }
+        else{
+            header("Location: index.php?action=signin");
+        }
+  
 
    /* 
     case 'signUp':
