@@ -16,7 +16,7 @@
                     echo '<tr>';
                     echo '<td><b>' . $row['namecategory'] . '</b></td>';
                     echo '<td><a href="index.php?action=editCategory&id=' . $row['id'] . '" > Edit </a></td>';
-                    echo '<td><a href="index.php?action=deleteCategory&id=' . $row['id'] . '" onclick="return false; confirm(\'Are you sure you want to delete this punch?\');" > Delete </a></td>';
+                    echo '<td><a href="index.php?action=deleteCategory&id=' . $row['id'] . '" > Delete </a></td>';
                     echo '</tr>';
             }
         ?>
