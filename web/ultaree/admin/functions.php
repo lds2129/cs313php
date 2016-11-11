@@ -121,7 +121,8 @@
 
     function getCategory($categoryId){
         global $db;
-        $sql = "SELECT * FROM category WHERE id = $categoryId";
+        $sql = "SELECT * FROM category WHERE id = $categoryId order by id";
+
         $result = $db->query($sql);
         $row = $result->fetch();
         return $row;
@@ -133,6 +134,15 @@
         $result = $db->query($sql);
         $row = $result->fetchAll();
         return $row;
+    }
+
+      function deleteCategory($categoryId){
+        global $db;
+        $id = $_SESSION['id'];
+        $sql = "DELETE FROM category WHERE id = $categoryId";
+
+        $result  = $db->exec($sql);
+
     }
 
 ?>

@@ -85,6 +85,18 @@ switch($action){
         else{
             header("Location: index.php?action=signin");
         }
+
+        case 'deleteCategory':
+        if($_SESSION['loggedin']){
+            $categoryId = $_GET['id'];
+            deleteCategory($categoryId);
+            header("Location: index.php?action=listCategory");
+            break; 
+        }
+        else{
+            header("Location: index.php?action=signin");
+        }
+  
   
   
 
