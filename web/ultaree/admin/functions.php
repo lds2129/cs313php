@@ -110,13 +110,13 @@
 
   }
 
-    function editCategory($title){
-        global $db;
-        $id = $_SESSION['id']
-        $sql = "UPDATE category SET namecategory = '$title', userid = '$id'";
-        $result  = $db->exec($sql);
+    // function editCategory($title){
+    //     global $db;
+    //     $id = $_SESSION['id']
+    //     $sql = "UPDATE category SET namecategory = '$title', userid = '$id'";
+    //     $result  = $db->exec($sql);
 
-    }
+    // }
 
     function getCategory($categoryId){
         global $db;
