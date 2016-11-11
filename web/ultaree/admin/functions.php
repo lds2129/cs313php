@@ -112,7 +112,7 @@
 
     function editCategory($title, $categoryId){
         global $db;
-        $id = $_SESSION['id']
+        $id = $_SESSION['id'];
         $sql = "UPDATE category SET namecategory = '$title', userid = '$id' WHERE id = $categoryId";
 
         $result  = $db->exec($sql);
