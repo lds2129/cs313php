@@ -139,9 +139,13 @@
       function deleteCategory($categoryId){
         global $db;
         $id = $_SESSION['id'];
-        $sql = "DELETE FROM category WHERE id = $categoryId";
 
-        $result  = $db->exec($sql);
+        $sql1 = "DELETE FROM discussion WHERE categoryid = $categoryId";
+        $result1  = $db->exec($sql1);
+
+        $sql2 = "DELETE FROM category WHERE id = $categoryId";
+        $result2  = $db->exec($sql2);
+
 
     }
 
