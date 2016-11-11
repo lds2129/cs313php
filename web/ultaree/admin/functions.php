@@ -110,5 +110,20 @@
 
     }
 
+    function getCategory($categoryId){
+        global $db;
+        $sql = "SELECT * FROM category WHERE id = $categoryId";
+        $result = $db->query($sql);
+        $row = $result->fetch();
+        return $row;
+    }
+
+    function getAllCategories(){
+        global $db;
+        $sql = "SELECT * FROM category ";
+        $result = $db->query($sql);
+        $row = $result->fetchAll();
+        return $row;
+    }
 
 ?>

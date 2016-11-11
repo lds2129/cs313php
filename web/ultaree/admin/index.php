@@ -63,6 +63,29 @@ switch($action){
         else{
             header("Location: index.php?action=signin");
         }
+
+        case 'listCategory':
+        if($_SESSION['loggedin']){
+            $categories = getAllCategories();
+            include("listCategory.php");  
+            break; 
+        }
+        else{
+            header("Location: index.php?action=signin");
+        }
+  
+
+        case 'editCategory':
+        if($_SESSION['loggedin']){
+            $categoryId = $_GET['id'];
+            $category = getCategory($categoryId);
+            include("editCategory.php");  
+            break; 
+        }
+        else{
+            header("Location: index.php?action=signin");
+        }
+  
   
 
    /* 

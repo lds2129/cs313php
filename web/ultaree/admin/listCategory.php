@@ -1,10 +1,28 @@
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/ultaree/header.php'; ?>
-    <h1>Welcome <?= $row["username"]; ?></h1>
-    <a href = "/ultaree/admin/index.php?action=createPost">create Post</a>
-    <br><br>
-    <a href = "/ultaree/admin/index.php?action=createCategory">create Category</a>
-     <a href = "/ultaree/admin/index.php?action=listCategory">List Categories</a>
+        <h1>list of posts</h1>
 
+    
+         
+         <table>
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Body</th>
+                </tr>
+            </thead>
+        <?php
+           // $query = $db->query('SELECT * FROM discussion ORDER BY id DESC')->fetchAll();
+            foreach($categories as $row){
+                    echo '<tr>';
+                    echo '<td><b>' . $row['namecategory'] . '</b></td>';
+                    echo '<td><a href="index.php?action=editCategory&id=' . $row['id'] . '" > Edit </a></td>';
+                    echo '<td><a href="index.php?action=deleteCategory&id=' . $row['id'] . '" > Delete </a></td>';
+                    echo '</tr>';
+            }
+        ?>
+        </table>
+
+        <br/>
      <footer id="footer">
         <p>&copy; James Kim's All rights has reserved.</p>
     </footer>
