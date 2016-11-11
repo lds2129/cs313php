@@ -11,7 +11,7 @@
                else 
                {
                	$categoryName = $_POST['categoryName'];
-               	editCategory($categoryName);
+               	editCategory($categoryName, $categoryId);
 
 	         	  header("Location: /ultaree/admin/index.php?action=listCategory");
                }
