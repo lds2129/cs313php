@@ -25,7 +25,7 @@
             <table id="post">
  				<tr>
  					<td>title</td>
- 					<td><input type="text" name="categoryName" value="$category['namecategory']" />
+ 					<td><input type="text" name="categoryName" value="<?= $category['namecategory']?>" />
  					</td>
  				</tr>
 
