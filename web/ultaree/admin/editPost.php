@@ -53,7 +53,7 @@
                 
                   foreach($db->query("SELECT * FROM category") as $category){
                      
-                    echo '<option value="' . $category['id'] . '" <?php echo ($category["id"] == $discussion["categoryid"]) ? "selected" : "";?>>' . $category['namecategory'] . '</option>';
+                    echo '<option value="' . $category['id'] . '"' . ($category["id"] == $discussion["categoryid"]) ? "selected" : " " . '>' . $category['namecategory'] . '</option>';
                    
                   }
                 ?>
