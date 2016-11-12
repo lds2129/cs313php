@@ -1,5 +1,5 @@
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/ultaree/header.php'; ?>
-        <h1>list of posts</h1>
+        <h1>list of Category</h1>
 
     
          
@@ -7,7 +7,8 @@
             <thead>
                 <tr>
                     <th>Title</th>
-                    <th>Body</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
                 </tr>
             </thead>
         <?php

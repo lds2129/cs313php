@@ -97,7 +97,38 @@ switch($action){
             header("Location: index.php?action=signin");
         }
   
+  case 'listPosts':
+        if($_SESSION['loggedin']){
+            $posts = getAllPosts();
+            include("listPost.php");  
+            break; 
+        }
+        else{
+            header("Location: index.php?action=signin");
+        }
   
+
+        case 'editPost':
+        if($_SESSION['loggedin']){
+            $discussionId = $_GET['id'];
+            $discussion = getPost($discussionId);
+            include("editPost.php");  
+            break; 
+        }
+        else{
+            header("Location: index.php?action=signin");
+        }
+
+        case 'deletePost':
+        if($_SESSION['loggedin']){
+            $discussionId = $_GET['id'];
+            deletePost($discussionId);
+            header("Location: index.php?action=listPosts");
+            break; 
+        }
+        else{
+            header("Location: index.php?action=signin");
+        }
   
 
    /* 

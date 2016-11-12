@@ -149,4 +149,22 @@
 
     }
 
+
+    function getPost($postId){
+        global $db;
+        $sql = "SELECT * FROM discussion WHERE id = $postId order by id";
+
+        $result = $db->query($sql);
+        $row = $result->fetch();
+        return $row;
+    }
+
+
+    function getAllPosts(){
+        global $db;
+        $sql = "SELECT * FROM discussion";
+        $result = $db->query($sql);
+        $row = $result->fetchAll();
+        return $row;
+    }
 ?>

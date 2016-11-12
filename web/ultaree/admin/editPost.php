@@ -2,66 +2,66 @@
         <h1>Create new post</h1>
 
         <?php
-        	$error = ""; 
+          $error = ""; 
             if(isset($_POST['Submit'])){
                if (!(isset($_POST['title']) && isset($_POST['body'])))
                {
-               	$error = "all fields are required";
+                $error = "all fields are required";
                }
                else 
                {
-               	$title = $_POST['title'];
-               	$body = $_POST['body'];
-               	$board = $_POST['board'];
+                $title = $_POST['title'];
+                $body = $_POST['body'];
+                $board = $_POST['board'];
 
-               	createPost($title, $body, $board);
+                createPost($title, $body, $board);
 
-	         	  header("Location: /ultaree/discussion.php");
+              header("Location: /ultaree/discussion.php");
                }
             }
 
         ?>
         <span>
-        	<?= $error ?>
+          <?= $error ?>
         </span>
         <form name="post" id="post-form" method="post" action="#">
             <table id="post">
- 				<tr>
- 					<td>title</td>
- 					<td><input type="text" name="title" />
- 					</td>
- 				</tr>
+        <tr>
+          <td>title</td>
+          <td><input type="text" name="title" value="<?= $disucssion['title']?>"/>
+          </td>
+        </tr>
 
                 <tr>
-                	<td>body</td>
-                	<td>
-                		<textarea name="body" rows="5" cols="50">
+                  <td>body</td>
+                  <td>
+                    <textarea name="body" rows="5" cols="50"  >
+                        <?= $disucssion['body']?>
+                    </textarea>
+                  </td>   
+        </tr>
 
-                		</textarea>
-                	</td>		
-				</tr>
-
-				<tr>
-					<td>
-						which board?
-					</td>
-					<td>
-						<select name="board">
-               		
+        <tr>
+          <td>
+            which board?
+          </td>
+          <td>
+            <select name="board">
+                  
                 <?php
           
                 
                   foreach($db->query("SELECT * FROM category") as $category){
                      
-                    echo '<option value="' . $category['id'] . '">' . $category['namecategory'] . '</option>';
+                    echo '<option value="' . $category['id'] . '" <?php echo ($category["id"] == $discussion["categoryid"]) ? "selected" : "";?>  >' . $category['namecategory'] . '</option>';
                    
                   }
                 ?>
 
             </select>
-					</td>
+          </td>
 
-				</tr>
+        </tr>
 
 
 
