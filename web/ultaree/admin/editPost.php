@@ -28,7 +28,7 @@
             <table id="post">
         <tr>
           <td>title</td>
-          <td><input type="text" name="title" value="<?= $disucssion['title']?>"/>
+          <td><input type="text" name="title" value="<?= $discussion['title']?>"/>
           </td>
         </tr>
 
@@ -36,7 +36,7 @@
                   <td>body</td>
                   <td>
                     <textarea name="body" rows="5" cols="50"  >
-                        <?= $disucssion['body']?>
+                        <?= $discussion['body']?>
                     </textarea>
                   </td>   
         </tr>
@@ -53,7 +53,7 @@
                 
                   foreach($db->query("SELECT * FROM category") as $category){
                      
-                    echo '<option value="' . $category['id'] . '" <?php echo ($category["id"] == $discussion["categoryid"]) ? "selected" : "";?>  >' . $category['namecategory'] . '</option>';
+                    echo '<option value="' . $category['id'] . '" <?php echo ($category["id"] == $discussion["categoryid"]) ? "selected" : "";?>>' . $category['namecategory'] . '</option>';
                    
                   }
                 ?>
