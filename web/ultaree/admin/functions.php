@@ -167,4 +167,14 @@
         $row = $result->fetchAll();
         return $row;
     }
+
+
+    function editPost($title, $body, $categoryId, $postId){
+        global $db;
+        $id = $_SESSION['id'];
+        $sql = "UPDATE discussion SET title = '$title', body= '$body', categoryid= '$categoryId', userid = '$id' WHERE id = $postId";
+
+        $result  = $db->exec($sql);
+
+    }
 ?>

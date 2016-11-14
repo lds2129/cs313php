@@ -1,5 +1,5 @@
 <?php include $_SERVER['DOCUMENT_ROOT'] . '/ultaree/header.php'; ?>
-        <h1>Create new post</h1>
+        <h1>Edit post</h1>
 
         <?php
           $error = ""; 
@@ -14,7 +14,7 @@
                 $body = $_POST['body'];
                 $board = $_POST['board'];
 
-                createPost($title, $body, $board);
+                editPost($title, $body, $board, $discussionId);
 
               header("Location: /ultaree/discussion.php");
                }
@@ -69,7 +69,7 @@
 
                 <tr><td colspan="3">&nbsp;</td></tr>
                 <tr>
-                    <td><input type="submit" name="Submit" value="Create"/></td>
+                    <td><input type="submit" name="Submit" value="Edit"/></td>
                     <td>&nbsp;</td>
                     <td>&nbsp;</td>
                 </tr>
