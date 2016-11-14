@@ -5,7 +5,8 @@
     <a href = "/ultaree/admin/index.php?action=createCategory">create Category</a>
     <br><br>
     <a href = "/ultaree/admin/index.php?action=listCategory">List Categories</a>
-
+    <br><br>  
+    <a href = "/ultaree/admin/index.php?action=listPosts">List Posts</a>
      <footer id="footer">
         <p>&copy; James Kim's All rights has reserved.</p>
     </footer>

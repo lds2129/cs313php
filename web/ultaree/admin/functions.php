@@ -177,4 +177,15 @@
         $result  = $db->exec($sql);
 
     }
+
+
+      function deletePost($postId){
+        global $db;
+        $id = $_SESSION['id'];
+
+        $sql1 = "DELETE FROM discussion WHERE id = $postId";
+        $result1  = $db->exec($sql1);
+
+
+    }
 ?>
